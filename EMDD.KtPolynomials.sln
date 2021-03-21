@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0C1C0517-95CF-4481-A1A8-FD0F8D8F1F13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F46C9BCA-266A-4BEE-AE5C-4B7A95B2EAF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{067E4D8D-5B6B-42DB-8546-C0139E7321CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMDD.KtPolynomials", "src\EMDD.KtPolynomials.csproj", "{E6DE600E-1C02-4C9C-AC2B-A0C8CDA74F63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMDD.KtPolynomialsTest", "test\unit\EMDD.KtPolynomialsTest.csproj", "{5B9BD379-D4EE-4091-9AD5-02646B927F65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6DE600E-1C02-4C9C-AC2B-A0C8CDA74F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6DE600E-1C02-4C9C-AC2B-A0C8CDA74F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6DE600E-1C02-4C9C-AC2B-A0C8CDA74F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6DE600E-1C02-4C9C-AC2B-A0C8CDA74F63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B9BD379-D4EE-4091-9AD5-02646B927F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B9BD379-D4EE-4091-9AD5-02646B927F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B9BD379-D4EE-4091-9AD5-02646B927F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B9BD379-D4EE-4091-9AD5-02646B927F65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{067E4D8D-5B6B-42DB-8546-C0139E7321CC} = {F46C9BCA-266A-4BEE-AE5C-4B7A95B2EAF2}
+		{E6DE600E-1C02-4C9C-AC2B-A0C8CDA74F63} = {0C1C0517-95CF-4481-A1A8-FD0F8D8F1F13}
+		{5B9BD379-D4EE-4091-9AD5-02646B927F65} = {067E4D8D-5B6B-42DB-8546-C0139E7321CC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4BB2CDE-EAD0-4EEF-8DBB-FAF64CD6893A}
+	EndGlobalSection
+EndGlobal

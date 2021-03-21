@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <Authors>Marlon Dumal-is</Authors>
+    <Company>EMDD</Company>
+    <LangVersion>9.0</LangVersion>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Description>Polynomial Library</Description>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/marlond18/EMDD.KtPolynomials.git</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/marlond18/EMDD.KtPolynomials.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Polynomials, Polynomial, C#, EMDD</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <LangVersion>9</LangVersion>
+    <OutputPath>D:\Programming Work\EMDD.KtPolynomials\build\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>9</LangVersion>
+    <OutputPath>D:\Programming Work\EMDD.KtPolynomials\build\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EMDD.KtNumerics" Version="2.0.0" />
+  </ItemGroup>
+
+</Project>
