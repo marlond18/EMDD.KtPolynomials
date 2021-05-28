@@ -36,6 +36,6 @@ KtPolynomial.Create(3,2,-1) or KtPolynomial.Create(new double[] { 3,2,-1 })
 - ```KtPolynomials``` can be differentiated and integrated
 #### Root Extraction/ Factorization
 - ```KtPolynomials``` has methods for root extraction and factorization using:
-* JenkinsTraub
-* Laguerre
-* Weirstrass
+  * JenkinsTraub
+  * Laguerre
+  * Weirstrass
