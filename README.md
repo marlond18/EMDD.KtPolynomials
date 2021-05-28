@@ -6,8 +6,6 @@ a library for Polynomial equation manipulations
 
 ## Requirements
 
-[Visual Studio 16.8](https://visualstudio.microsoft.com/vs) or greater
-
 [.Net 5.0.102 sdk](https://dotnet.microsoft.com/download/dotnet/5.0) or greater
 
 ## Nuget Package Usage
