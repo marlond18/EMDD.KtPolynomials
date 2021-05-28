@@ -14,6 +14,8 @@
     <RepositoryUrl>https://github.com/marlond18/EMDD.KtPolynomials.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Polynomials, Polynomial, C#, EMDD</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
