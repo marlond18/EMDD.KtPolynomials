@@ -11,14 +11,14 @@ namespace EMDD.KtPolynomials
 {
     public class Zero : Monomial
     {
-        public Zero() : base(new Number [] { 0 })
+        public Zero() : base([0])
         {
         }
     }
 
     public class One : Monomial
     {
-        public One() : base(new Number[] { 1 })
+        public One() : base([1])
         {
         }
     }
@@ -41,11 +41,16 @@ namespace EMDD.KtPolynomials
 
     public class KtPolynomial : IEquatable<KtPolynomial>
     {
+        private string _variable = "x";
         protected KtPolynomial(params Number[] coeffs)
         {
             Coefficients = coeffs;
         }
-
+        /// <summary>
+        /// Create a polynomial
+        /// </summary>
+        /// <param name="coeffs">array of coefficients starts with the highest exponent</param>
+        /// <returns></returns>
         public static KtPolynomial Create(params Number[] coeffs)
         {
             if (coeffs == null || coeffs.Length < 1) return new Zero();
@@ -56,9 +61,28 @@ namespace EMDD.KtPolynomials
             return new KtPolynomial(fix);
         }
 
+        /// <summary>
+        /// Create a polynomial but replace the coefficient
+        /// </summary>
+        /// <param name="coeffs">array of coefficients starts with the highest exponent</param>
+        /// <returns></returns>
+        public static KtPolynomial Create(string variable,params Number[] coeffs)
+        {
+            if (coeffs == null || coeffs.Length < 1) return new Zero();
+            if (coeffs.Length == 1 && coeffs[0] == 1) return new One();
+            var fix = FixCoefficients(coeffs);
+            if (fix.Length == 1 && fix[0] == 0) return new Zero();
+            if (fix.Length == 1 && fix[0] == 1) return new One();
+            var poly = new KtPolynomial(fix)
+            {
+                _variable = variable
+            };
+            return poly;
+        }
+
         private static Number[] FixCoefficients(Number[] coeffs)
         {
-            if (coeffs == null || coeffs.Length < 1) return new Number[] { KtComplex.Zero };
+            if (coeffs == null || coeffs.Length < 1) return [KtComplex.Zero];
             var list = coeffs.ToList();
             while (list.Count >= 2 && list[^1] == 0)
             {
@@ -255,7 +279,7 @@ namespace EMDD.KtPolynomials
 
         public Number[] Roots(RootMethod method = RootMethod.JenkinsTraub)
         {
-            if (Degree < 1) return Array.Empty<Number>();
+            if (Degree < 1) return [];
             var roots = GetInitialRootByMethod(method);
             FixRootRoundingErrors(roots);
             return roots;
@@ -309,7 +333,7 @@ namespace EMDD.KtPolynomials
                     initial -= a;
                 }
             }
-            return roots.ToArray();
+            return [.. roots];
         }
 
         public Number[] RootsWeirstrass()
@@ -347,7 +371,7 @@ namespace EMDD.KtPolynomials
 
         public override string ToString() => TurnCoeffToString(Coefficients);
 
-        internal static string TurnCoeffToString(Number[] coeffsSource)
+        internal string TurnCoeffToString(Number[] coeffsSource)
         {
             if (coeffsSource == null) return "";
             var coeffs = coeffsSource.Select(elem => elem.Clone()).Reverse().ToArray();
@@ -358,7 +382,7 @@ namespace EMDD.KtPolynomials
                 var coefficient = coeffs[i];
                 if (coefficient == 0) continue;
                 builder.Append(ConvertCoefficientToString(coefficient, i, degree));
-                if (i < degree) builder.Append(i == degree - 1 ? "x" : $"x^{degree - i}");
+                if (i < degree) builder.Append(i == degree - 1 ? _variable : $"{_variable}^{degree - i}");
             }
             return builder.ToString();
         }
