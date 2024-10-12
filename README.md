@@ -16,16 +16,16 @@ https://www.nuget.org/packages/EMDD.KtPolynomials/
 `<PackageReference Include="EMDD.KtPolynomials" Version="*.*.*" />`
 
 ## How it works
-- this library was created in order to make representation of the polynomial equations. ```KtPolynomial``` is a class that represents a polynomial of any degree.
+- this library was created in order to make a representation of the polynomial equations. ```KtPolynomial``` is a class that represents a polynomial of any degree.
 
 
 ## Usage
 A polynomial can be represented by ```KtPolynomial``` through the ```KtPolynomial.Create``` method, with an array of [```EMDD.KtNumeric.Number```](https://github.com/marlond18/EMDD.KtNumerics) as a parameter, representing the coefficient of the polynomial.
 
-So, `x^3+2x^2-1=0` is instantiated as
+So, `4x^3+2x^2-1=0` is instantiated as
 
 ```c#
-KtPolynomial.Create(3,2,-1) or KtPolynomial.Create(new double[] { 3,2,-1 })
+KtPolynomial.Create(4,2,-1) or KtPolynomial.Create(new double[] { 4,2,-1 })
 ```
 
 ### ```KtPolynomials``` Methods
