@@ -1,5 +1,6 @@
-&nbsp; [![Nuget](https://img.shields.io/nuget/v/EMDD.KtPolynomials)](https://www.nuget.org/packages/EMDD.KtPolynomials/)[![Nuget](https://img.shields.io/nuget/dt/EMDD.KtPolynomials)](https://www.nuget.org/stats/packages/EMDD.KtPolynomials?groupby=Version&groupby=ClientName&groupby=ClientVersion)[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/marlond18/EMDD.KtPolynomials/Run%20Tests)](https://github.com/marlond18/EMDD.KtPolynomials/actions/workflows/runTest.yml)
+&nbsp; [![Nuget](https://img.shields.io/nuget/v/EMDD.KtPolynomials)](https://www.nuget.org/packages/EMDD.KtPolynomials/)[![Nuget](https://img.shields.io/nuget/dt/EMDD.KtPolynomials)](https://www.nuget.org/stats/packages/EMDD.KtPolynomials?groupby=Version&groupby=ClientName&groupby=ClientVersion)[![Deploy to Nuget](https://github.com/marlond18/EMDD.KtPolynomials/actions/workflows/nuget.yml/badge.svg)](https://github.com/marlond18/EMDD.KtPolynomials/actions/workflows/nuget.yml)[![Run Tests](https://github.com/marlond18/EMDD.KtPolynomials/actions/workflows/runTest.yml/badge.svg)](https://github.com/marlond18/EMDD.KtPolynomials/actions/workflows/runTest.yml)
 &nbsp; 
+
 ----------------
 # EMDD.KtPolynomials
 a library for Polynomial equation manipulations
